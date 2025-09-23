@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Xmonad
+Comment=The pure functional tiling window manager
+Exec=env XMONAD_CONFIG_DIR=$HOME/.config/xmonad /home/$USER/.local/bin/xmonad
+Type=Application

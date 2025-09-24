@@ -1,0 +1,26 @@
+Config
+  { font = "xft:Monospace-10"
+  , bgColor = "#1c1c1c"
+  , fgColor = "#ffffff"
+  , position = Top
+  , lowerOnStart = True
+  , commands =
+      [ Run UnsafeStdinReader                 -- Workspaces de XMonad
+      , Run Cpu ["-t", "CPU: <total>%"] 20
+      , Run Memory ["-t", "Mem: <usedratio>%"] 20
+      , Run Battery
+          [ "-t", "Bat: <left>%"
+          , "-L", "20", "-H", "80"
+          , "-l", "red", "-n", "yellow", "-h", "green"
+          ] 50
+      , Run Volume "default" "Master"
+          ["-t", "Vol: <volume>%"] 10
+      , Run Wireless "wlp3s0"
+          ["-t", "WiFi: <essid> <quality>%"] 50
+      , Run Com "/home/psykokwak/.local/bin/clipmon/clipmon" [] "clip" 10
+      , Run Date "%a %d %b %Y %H:%M" "date" 50
+      ]
+  , sepChar = "%"
+  , alignSep = "}{"
+  , template = "%UnsafeStdinReader% }{ %cpu% | %memory% | %battery% | %default:Master% | %wlp3s0wi% | %clip% | %date%"
+  }

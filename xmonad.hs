@@ -1,13 +1,16 @@
 import XMonad
-import XMonad.Util.SpawnOnce
+--import XMonad.Util.SpawnOnce
+import MyStartup
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import qualified XMonad.StackSet as W
+--import "containers" qualified Data.Map as M
 
 -- esta funcion inicia el fondo de pantalla e inicia xmobarspawnOnce :: String -> X, donde X es una funcion del sistema supongo :v
-myStartupHook :: X ()
-myStartupHook = do
-    spawnOnce "feh --bg-fill /home/psykokwak/Images/fondos/GatoBoca.jpg &" -- la ruta de tu fondo de pantalla
-    spawnOnce "xmobar &"
+--myStartupHook :: X ()
+--myStartupHook = do
+    --spawnOnce "feh --bg-fill /home/psykokwak/Images/fondos/GatoBoca.jpg &" -- la ruta de tu fondo de pantalla
+    --spawnOnce "xmobar &"
 
 main :: IO ()
 main = xmonad =<< xmobar def

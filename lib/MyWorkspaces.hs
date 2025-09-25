@@ -3,13 +3,13 @@ module MyWorkspaces (myWorkspaces) where
 myWorkspaces :: [String]
 myWorkspaces =
     [
-        "1: Web"
-        , "2: Dev"
-        , "3: Files"
-        , "4: Music"
-        , "5: Media"
-        , "6: Sys"
-        , "7: Chat"
-        , "8: Notes"
-        , "9: Misc"
+        "\xe745"
+        , "\xe777"
+        , "\xf187"
+        , "\xe227"
+        , "\xf40f"
+        , "\xf314"
+        , "\xf370"
+        , "\xeb26"
+        , "\xeb63"
     ]

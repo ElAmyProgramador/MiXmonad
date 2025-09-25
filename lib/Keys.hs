@@ -13,5 +13,5 @@ myKeys conf =
         ("M-S-p", spawn "rofi -show run"),
         ("M-w", spawn "rofi -show menu"),
         ("M-<Return>", spawn miTerminal),
-        ("M-S-c", kill)
+        ("M-S-k", kill)
     ]

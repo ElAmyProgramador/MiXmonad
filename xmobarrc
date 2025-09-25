@@ -1,5 +1,5 @@
 Config
-  { font = "xft:Monospace-10"
+  { font = "xft:Hack Nerd Font Mono:pixelsize=14:antialias=true:hinting=true",
   , bgColor = "#1c1c1c"
   , fgColor = "#ffffff"
   , position = Top

@@ -4,17 +4,23 @@ import Keys
 import MyWorkspaces
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Util.EZConfig (additionalKeysP)
+import XMonad.Util.Run (spawnPipe)
 import qualified XMonad.StackSet as W
+import System.IO (hPutStrLn)
 
-main = xmonad =<< xmobar (def
-    {modMask = mod4Mask, -- tecla super/windows
-    borderWidth = 2,
-    normalBorderColor = "282828",
-    focusedBorderColor = "ff79c6",
-    workspaces = myWorkspaces,
-    terminal = "kitty", -- esta es la terminal que tengo por defecto, cambiala por la tuya
-    startupHook = myStartupHook,
-    layoutHook = avoidStruts $ layoutHook def,
-    manageHook = manageHook def <+> manageDocks
-    }
-    `myKeys`)
+main = do
+  xmproc <- spawnPipe "xmobar ~/.config/xmobar/xmobarrc"
+  xmonad (docks (def
+    { modMask            = mod4Mask
+    , borderWidth        = 2
+    , normalBorderColor  = "#282828"
+    , focusedBorderColor = "#ff79c6"
+    , workspaces         = myWorkspaces
+    , terminal           = "kitty"
+    , startupHook        = myStartupHook
+    , layoutHook         = avoidStruts $ layoutHook def
+    , manageHook         = manageHook def <+> manageDocks
+    , logHook            = dynamicLogWithPP xmobarPP
+                            { ppOutput = hPutStrLn xmproc }
+    }) `additionalKeysP` myKeys)

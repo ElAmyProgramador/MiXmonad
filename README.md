@@ -21,3 +21,4 @@ Entre las herramientas del sistema, tenemos:
 - xmobar, si se instala xmobar desde cabal, obtendremos un error, ya que no se ha actualizado en años xmobar en cabal, por lo que debe de instalarse directamente desde los repos de opensuse
 - xclip (en mi caso vino por defecto, pero quizás debas de instalarlo usando "sudo zypper install xclip")
 - rofi, en mi caso usaré rofi para hacer esto más estético
+- packman, repositorio comunitario de la comunidad

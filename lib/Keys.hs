@@ -12,5 +12,10 @@ myKeys = [
     ("M-S-p", spawn "rofi -show run"),
     ("M-w", spawn "rofi -show menu"),
     ("M-<Return>", spawn miTerminal),
-    ("M-S-k", kill)
+    ("M-S-k", kill),
+    ("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%"),
+    ("<XF86AudioLowerVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%"),
+    ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle"),
+    ("<XF86MonBrightnessUp>", spawn "brightnessctl set +5%"),
+    ("<XF86MonBrightnessDown>", spawn "brightnessctl set 5%-")
     ]

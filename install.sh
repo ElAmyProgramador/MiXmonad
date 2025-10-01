@@ -10,7 +10,10 @@ sudo zypper ar -cfp 90 https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_
 sudo zypper ref
 
 # instalación de herramientas (en primera isntancia usaré feh, aunque puedes usar nitrogen u otro gestor de fondos de pantalla)
-sudo zypper install ghc ghc-cabal cabal-install libX11-devel libXext-devel libXft-devel libXrandr-devel libXinerama-devel libXss-devel xmobar feh rofi picom NetworkManager-applet volumeicon
+sudo zypper install ghc ghc-cabal cabal-install libX11-devel libXext-devel libXft-devel libXrandr-devel libXinerama-devel libXss-devel xmobar feh rofi picom NetworkManager-applet pasystray brightnessctl
+
+# gestor de portapapeles (prueba)
+flatpak install flathub com.github.hluk.copyq
 
 # esto instalará XMonad y XMonad-contrib
 cabal install xmonad xmonad-contirb --lib # he encontrado que cabal los intenta instalar como software y no como una libreria universal para ghc

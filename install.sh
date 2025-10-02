@@ -5,12 +5,13 @@
 # añadir packman y x11de
 sudo zypper addrepo https://download.opensuse.org/repositories/X11:lxde/openSUSE_Tumbleweed/X11:lxde.repo
 sudo zypper ar -cfp 90 https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/ packman
+sudo zypper addrepo https://download.opensuse.org/repositories/home:MaxxedSUSE/openSUSE_Tumbleweed/home:MaxxedSUSE.repo
 
 # actualizar los repos (si aparece algo sobre aceptar las llaves, puedes aceptarla  con "a", o solo temporalmente con "t")
 sudo zypper ref
 
 # instalación de herramientas (en primera isntancia usaré feh, aunque puedes usar nitrogen u otro gestor de fondos de pantalla)
-sudo zypper install ghc ghc-cabal cabal-install libX11-devel libXext-devel libXft-devel libXrandr-devel libXinerama-devel libXss-devel xmobar feh rofi picom NetworkManager-applet pasystray brightnessctl
+sudo zypper install ghc ghc-cabal cabal-install libX11-devel libXext-devel libXft-devel libXrandr-devel libXinerama-devel libXss-devel xmobar feh rofi picom NetworkManager-applet pasystray brightnessctl psensor
 
 # gestor de portapapeles (prueba)
 flatpak install flathub com.github.hluk.copyq

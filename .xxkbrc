@@ -1,0 +1,5 @@
+XXkb.mainwindow.type: tray
+XXkb.group.1.layout: latam
+XXkb.group.2.layout: latam-dvorak
+XXkb.button.enable: YES
+XXkb.mainwindow.enable: YES

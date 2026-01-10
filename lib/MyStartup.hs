@@ -12,8 +12,9 @@ myStartupHook = do
     spawn "xinput set-button-map 'SynPS/2 Synaptics TouchPad' 3 2 1"
     spawn "xinput set-button-map 'Gaming Mouse' 3 2 1 " -- un mouse gamer
     spawn "setxkbmap -device 15 latam -variant dvorak &"
-    spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor primary --transparent true --alpha 0 --tint 0x1c1c1c --height 22 &"
-    spawnOnce "orage &"
+    --spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor primary --transparent true --alpha 0 --tint 0x1c1c1c --height 22 &"
+    spawnOnce "trayer --edge top --align right --widthtype request --padding 0 --SetDockType true --SetPartialStrut true --expand true --monitor primary --transparent false --alpha 255 --tint 0x1c1c1c --height 22 &"
+    --spawnOnce "orage &"
     spawnOnce "nm-applet &"
     spawnOnce "pasystray &"
     spawnOnce "flatpak run com.github.hluk.copyq --start-server &"

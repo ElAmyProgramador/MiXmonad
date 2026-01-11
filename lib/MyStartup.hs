@@ -18,5 +18,5 @@ myStartupHook = do
     spawnOnce "pasystray &"
     spawnOnce "flatpak run com.github.hluk.copyq --start-server &"
     spawnOnce "cbatticon -n &"
-    spawnOnce "picom &"
+    spawnOnce "picom --config ~/.config/picom/picom.conf &"
     spawnOnce "./setKB.sh &"

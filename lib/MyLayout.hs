@@ -17,7 +17,9 @@ myLayout :: ModifiedLayout AvoidStruts
                Window
 myLayout = avoidStruts $
              smartBorders $
-               gaps [(U,20), (D,8), (L,8), (R,8)] $
-                 (tiled ||| Mirror tiled ||| Grid ||| Full)
+               gaps [(U,18), (D,8), (L,8), (R,8)] $
+                 (monadTall ||| monadWide ||| Grid ||| Full)
   where
     tiled = spacing 8 $ Tall 1 (3/100) (1/2)
+    monadTall = spacing 8 $ Tall 1 (3/100) (1/2)
+    monadWide = Mirror monadTall

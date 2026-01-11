@@ -11,6 +11,7 @@ myKeys = [
     ("M-d", spawn "rofi -show drun"),
     ("M-S-p", spawn "rofi -show run"),
     ("M-w", spawn "rofi -show menu"),
+    ("M-t", spawn "dolphin"),
     ("M-<Return>", spawn miTerminal),
     ("M-S-k", kill),
     ("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%"),

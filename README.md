@@ -22,3 +22,4 @@ Entre las herramientas del sistema, tenemos:
 - xclip (en mi caso vino por defecto, pero quizás debas de instalarlo usando "sudo zypper install xclip")
 - rofi, en mi caso usaré rofi para hacer esto más estético
 - packman, repositorio comunitario de la comunidad
+- i3lock, para tener bloqueo de pantalla con contraseña al suspender

@@ -20,3 +20,4 @@ myStartupHook = do
     spawnOnce "cbatticon -n &"
     spawnOnce "picom --config ~/.config/picom/picom.conf &"
     spawnOnce "./setKB.sh &"
+    spawnOnce "xss-lock -- i3lock -c 1c1c1c & -t -i ~/Images/fondos/PokemonesDurmiendo.jpg"
